@@ -5,7 +5,12 @@ export function activate(context: vscode.ExtensionContext) {
 	const watcher = vscode.workspace.createFileSystemWatcher("**/*.{lua,luau}");
 
 	watcher.onDidCreate(async (uri) => {
-		const fileName = path.basename(uri.fsPath, path.extname(uri.fsPath));
+		let fileName = path.basename(uri.fsPath, path.extname(uri.fsPath));
+
+		if (fileName.toLowerCase() === "init") {
+			const parentDir = path.dirname(uri.fsPath);
+			fileName = path.basename(parentDir);
+		}
 
 		const bytes = await vscode.workspace.fs.readFile(uri);
 		const text = Buffer.from(bytes).toString("utf8");
