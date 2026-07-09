@@ -1,9 +1,10 @@
-# Change Log
+# Changelog
+### 1.0.0
 
-All notable changes to the "moduleboilerplate" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+* Initial release.
+* Automatic boilerplate generation for new `.lua` and `.luau` files.
+* Filename-based module variable generation.
+* Automatic filename sanitization for spaces, hyphens, and underscores.
+  
+### 1.1.0
+* init.lua modules now use their parent folder name rather than their name.
