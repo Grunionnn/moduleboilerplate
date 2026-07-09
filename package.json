@@ -3,6 +3,10 @@
   "displayName": "ModuleBoilerplate",
   "description": "Generates the default boilerplate for Lua/Luau modules.",
   "publisher": "Grunion",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Grunion/module-boilerplate"
+  },
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.125.0"
