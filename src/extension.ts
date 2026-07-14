@@ -6,6 +6,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 	watcher.onDidCreate(async (uri) => {
 		let fileName = path.basename(uri.fsPath, path.extname(uri.fsPath));
+		if (fileName.includes(".server") || fileName.includes(".client")) {
+			return;
+		}
 
 		if (fileName.toLowerCase() === "init") {
 			const parentDir = path.dirname(uri.fsPath);

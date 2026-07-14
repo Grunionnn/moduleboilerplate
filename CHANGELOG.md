@@ -8,3 +8,6 @@
   
 ### 1.1.0
 * init.lua modules now use their parent folder name rather than their name.
+
+### 1.1.1
+* excluded server scripts and client scripts from getting boiler plate added
